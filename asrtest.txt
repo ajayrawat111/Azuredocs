@@ -1,0 +1,49 @@
+                                        On Prem Requirements
+
+•	On Premises
+
+At least one on prem windows server with following roles
+
+•	Config Server
+•	Process Server
+•	Master Target server
+
+VM which needs to be protected need to have mobility service agent installed
+
+
+Process Server - used for caching, compression and encryption 
+
+Config server – Used for centralized management and monitoring
+
+Master Target – Used for target repository and retention
+
+Mobility Server – Captures all data writes form memory and replication. 
+
+
+Azure Requirements
+
+
+
+•	Azure
+•	Azure subscription
+•	Virtual network
+•	Azure storage
+•	Azure recovery service vault. 
+
+
+Deployment Steps   High level
+
+High level 
+
+•	Setup Azure network and storage accounts
+•	Create Recovery Service Vault in Azure
+•	Prepare on prem server which is going to act as config/process server
+•	Specify source. Target and replication policy
+•	Deploy the mobility service on the vm 
+•	Enable replication for the vm
+•	Run a test failover
+
+
+Recovery time objective (RTO): The amount of time that it takes to complete a recovery or restore.
+Recovery point objective (RPO): The amount of acceptable data loss if a recovery needs to be done.
+
